@@ -85,19 +85,19 @@ ${BOLD}EXAMPLES:${NC}
     ./gh-dep-scanner.sh
 
     # Find repos with livewire < v4 in an organization
-    ./gh-dep-scanner.sh --url "https://github.com/orgs/TurkHosting/repositories" \\
+    ./gh-dep-scanner.sh --url "https://github.com/orgs/YOUR_ORG/repositories" \\
                         --type composer \\
                         --package livewire/livewire \\
                         --below 4
 
     # Find repos with react < v18 for a user
-    ./gh-dep-scanner.sh --url "https://github.com/boranbar" \\
+    ./gh-dep-scanner.sh --url "https://github.com/USERNAME" \\
                         --type node \\
                         --package react \\
                         --below 18
 
     # Specify a branch
-    ./gh-dep-scanner.sh --url "https://github.com/orgs/MyOrg/repositories" \\
+    ./gh-dep-scanner.sh --url "https://github.com/orgs/YOUR_ORG/repositories" \\
                         --type composer \\
                         --package laravel/framework \\
                         --below 10 \\
@@ -222,9 +222,9 @@ interactive_mode() {
     if [[ -z "$URL" ]]; then
         echo -e "${CYAN}Enter GitHub URL:${NC}"
         echo "  Examples:"
-        echo "    https://github.com/orgs/TurkHosting/repositories"
-        echo "    https://github.com/boranbar?tab=repositories"
-        echo "    https://github.com/boranbar"
+        echo "    https://github.com/orgs/YOUR_ORG/repositories"
+        echo "    https://github.com/USERNAME?tab=repositories"
+        echo "    https://github.com/USERNAME"
         read -r -p "> " URL
         echo ""
     fi
