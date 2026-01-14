@@ -2,6 +2,29 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Communication Guidelines
+
+### Language
+Always respond in English unless explicitly requested otherwise.
+
+### Git Workflow
+#### Initial Check
+At the start of each conversation, always run:
+1. `git fetch` to get the latest remote information
+2. `git status` to check the current repository state
+
+#### After completing any task:
+1. Ask if the user wants to commit and push changes to the GitHub repository
+2. If confirmed, commit changes with Turkish commit messages
+3. Push to the remote repository
+
+#### Commit Message Guidelines
+When creating commit messages, **DO NOT** include the following automated signatures:
+- 🤖 Generated with [Claude Code](https://claude.ai/code)
+- Co-Authored-By: Claude <noreply@anthropic.com>
+
+Keep commit messages clean, descriptive, and focused on the actual changes made.
+
 ## Project Overview
 
 A single-file bash script (`gh-dep-scanner.sh`) that scans GitHub repositories (org or personal) to find which repos use a specific package below a given version. Supports Composer (PHP) and Node (JavaScript) dependencies.
